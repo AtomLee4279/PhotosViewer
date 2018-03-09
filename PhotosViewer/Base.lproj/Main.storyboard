@@ -26,7 +26,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="⬅️"/>
                                 <connections>
-                                    <action selector="preView" destination="BYZ-38-t0r" eventType="touchUpInside" id="bXh-Yg-el9"/>
+                                    <action selector="preView" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Qg-k8-nFx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a3o-DW-XpY">
@@ -34,7 +34,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="➡️"/>
                                 <connections>
-                                    <action selector="next" destination="BYZ-38-t0r" eventType="touchUpInside" id="CK5-cP-Kmf"/>
+                                    <action selector="next" destination="BYZ-38-t0r" eventType="touchUpInside" id="lyM-lb-bJ6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s1w-Ev-LIA">
@@ -57,7 +57,9 @@
                     <connections>
                         <outlet property="descLabel" destination="QKU-cA-eec" id="9sg-4d-eer"/>
                         <outlet property="headImage" destination="xc5-sY-JSM" id="vpv-Rz-o2n"/>
+                        <outlet property="nextBtn" destination="a3o-DW-XpY" id="Azq-Je-yQ3"/>
                         <outlet property="numLabel" destination="s1w-Ev-LIA" id="RNi-Av-Dul"/>
+                        <outlet property="preViewBtn" destination="n7e-Vy-46G" id="bd1-gh-wNg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
