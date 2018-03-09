@@ -21,6 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.index = 0;
+    if (self.headImage.image==nil)
+    {
+        self.numLabel.text =@"1/3";
+        self.headImage.image = [UIImage imageNamed:@"1"];
+        self.descLabel.text = @"1";
+    }
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -34,6 +41,7 @@
 - (IBAction)preView
 {
     self.index --;
+    NSLog(@"preview:index:%@",[NSString stringWithFormat:@"%d",self.index]);
     switch (_index) {
         case 0:
             self.numLabel.text =@"1/3";
@@ -44,21 +52,22 @@
             self.numLabel.text =@"2/3";
             self.headImage.image = [UIImage imageNamed:@"2"];
             self.descLabel.text = @"2";
+            
             break;
         case 2:
             self.numLabel.text = @"3/3";
             self.headImage.image = [UIImage imageNamed:@"3"];
             self.descLabel.text = @"3";
         default:
+            self.index = 0;
             break;
     }
-    
 }
 
 - (IBAction)next
 {
-    
     self.index ++;
+    NSLog(@"next:index:%@",[NSString stringWithFormat:@"%d",self.index]);
     switch (_index) {
         case 0:
             self.numLabel.text =@"1/3";
@@ -69,12 +78,14 @@
             self.numLabel.text =@"2/3";
             self.headImage.image = [UIImage imageNamed:@"2"];
             self.descLabel.text = @"2";
+            
             break;
         case 2:
             self.numLabel.text = @"3/3";
             self.headImage.image = [UIImage imageNamed:@"3"];
             self.descLabel.text = @"3";
         default:
+            self.index = 2;
             break;
     }
 }
