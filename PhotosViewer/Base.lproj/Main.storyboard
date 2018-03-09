@@ -57,7 +57,6 @@
                     <connections>
                         <outlet property="descLabel" destination="QKU-cA-eec" id="9sg-4d-eer"/>
                         <outlet property="headImage" destination="xc5-sY-JSM" id="vpv-Rz-o2n"/>
-                        <outlet property="image" destination="xc5-sY-JSM" id="Omo-6a-1rg"/>
                         <outlet property="numLabel" destination="s1w-Ev-LIA" id="RNi-Av-Dul"/>
                     </connections>
                 </viewController>
