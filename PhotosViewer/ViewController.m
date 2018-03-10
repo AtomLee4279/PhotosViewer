@@ -36,8 +36,6 @@
     self.index = 0;
     self.preViewBtn.enabled = NO;
     [self setPhotosData];
-    
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 
@@ -45,33 +43,29 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 //点击前一张/后一张触发事件
 -(IBAction)viewPhotos:(UIButton*)btn
 {
-    (btn.tag == 1)?(self.index--):(self.index++);
-    NSLog(@"viewPhotos:index:%@",[NSString stringWithFormat:@"%d",self.index]);
-    [self setPhotosData];
-    //设置按钮状态，及索引值
-    switch (_index) {
-        case 0:
-            self.preViewBtn.enabled = NO;
-            break;
+    switch (btn.tag) {
         case 1:
-            (btn.tag == 1)?(self.nextBtn.enabled = YES):(self.preViewBtn.enabled = YES);
+            self.index--;
             break;
         case 2:
-            self.nextBtn.enabled =NO;
+            self.index++;
         default:
-            (btn.tag == 1)?(self.index = 0):(self.index = 2);
-            (btn.tag == 1)?(self.preViewBtn.enabled = NO):(self.nextBtn.enabled = NO);
             break;
     }
-    
+    NSLog(@"viewPhotos:index:%@",[NSString stringWithFormat:@"%d",self.index]);
+    [self setPhotosData];
+    self.preViewBtn.enabled = (self.index!=0);
+    self.nextBtn.enabled = (self.index!=self.images.count-1);
 }
+
 //根据索引值设置图片数据
 -(void)setPhotosData
 {
-    self.numLabel.text = [NSString stringWithFormat:@"%d/%d",_index+1,3];
+    self.numLabel.text = [NSString stringWithFormat:@"%d/%ld",_index+1,_images.count];
     self.headImage.image = [UIImage imageNamed:_images[_index][@"icon"]];
     self.descLabel.text = _images[_index][@"desc"];
 }
