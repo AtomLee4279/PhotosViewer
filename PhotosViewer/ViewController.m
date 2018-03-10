@@ -15,12 +15,24 @@
 @property (weak, nonatomic) IBOutlet UIImageView *headImage;
 @property (weak, nonatomic) IBOutlet UILabel *numLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
+@property(strong,nonatomic) NSArray *images;//一般oc对象用strong，UI控件用weak
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //保存图片数据
+    NSMutableDictionary *dict1 = [NSMutableDictionary dictionary];
+    dict1[@"icon"] = @"1";
+    dict1[@"desc"] = @"1";
+    NSMutableDictionary *dict2 = [NSMutableDictionary dictionary];
+    dict2[@"icon"] = @"2";
+    dict2[@"desc"] = @"2";
+    NSMutableDictionary *dict3 = [NSMutableDictionary dictionary];
+    dict3[@"icon"] = @"3";
+    dict3[@"desc"] = @"3";
+    _images = @[dict1,dict2,dict3];
     self.index = 0;
     self.preViewBtn.enabled = NO;
     [self setPhotosData];
@@ -59,26 +71,9 @@
 //根据索引值设置图片数据
 -(void)setPhotosData
 {
-    switch (_index)
-    {
-        case 0:
-            self.numLabel.text =@"1/3";
-            self.headImage.image = [UIImage imageNamed:@"1"];
-            self.descLabel.text = @"1";
-            break;
-        case 1:
-            self.numLabel.text =@"2/3";
-            self.headImage.image = [UIImage imageNamed:@"2"];
-            self.descLabel.text = @"2";
-            break;
-        case 2:
-            self.numLabel.text = @"3/3";
-            self.headImage.image = [UIImage imageNamed:@"3"];
-            self.descLabel.text = @"3";
-        default:
-            break;
-    }
-    
+    self.numLabel.text = [NSString stringWithFormat:@"%d/%d",_index+1,3];
+    self.headImage.image = [UIImage imageNamed:_images[_index][@"icon"]];
+    self.descLabel.text = _images[_index][@"desc"];
 }
 
 @end
