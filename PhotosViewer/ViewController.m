@@ -34,17 +34,11 @@
 {
     if(_images ==nil)//注意：此处若用self.images ==nil,那么相当于重写get方法里又调用了get方法。会造成死循环。所以改用成员属性_images描述
     {
-        //保存图片数据
-        NSMutableDictionary *dict1 = [NSMutableDictionary dictionary];
-        dict1[@"icon"] = @"1";
-        dict1[@"desc"] = @"1";
-        NSMutableDictionary *dict2 = [NSMutableDictionary dictionary];
-        dict2[@"icon"] = @"2";
-        dict2[@"desc"] = @"2";
-        NSMutableDictionary *dict3 = [NSMutableDictionary dictionary];
-        dict3[@"icon"] = @"3";
-        dict3[@"desc"] = @"3";
-        _images = @[dict1,dict2,dict3];
+        //读取图片数据
+        //1.获取plist文件的全路径
+        NSString* path = [[NSBundle mainBundle] pathForResource:@"images.plist" ofType:nil];
+        //2.读取plist文件
+        _images = [NSArray arrayWithContentsOfFile:path];
     }
     return _images;
 }
@@ -70,9 +64,9 @@
 //根据索引值设置图片数据
 -(void)setPhotosData
 {
-    self.numLabel.text = [NSString stringWithFormat:@"%d/%ld",_index+1,_images.count];
-    self.headImage.image = [UIImage imageNamed:_images[_index][@"icon"]];
-    self.descLabel.text = _images[_index][@"desc"];
+    self.numLabel.text = [NSString stringWithFormat:@"%d/%ld",_index+1,self.images.count];
+    self.headImage.image = [UIImage imageNamed:self.images[_index][@"icon"]];
+    self.descLabel.text = self.images[_index][@"desc"];
 }
 
 @end

@@ -13,6 +13,7 @@
 		67581F9320522368008DE3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67581F9220522368008DE3AF /* Assets.xcassets */; };
 		67581F9620522368008DE3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67581F9420522368008DE3AF /* LaunchScreen.storyboard */; };
 		67581F9920522368008DE3AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67581F9820522368008DE3AF /* main.m */; };
+		6790BFA32053C2D600B6AC98 /* images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6790BFA22053C2D600B6AC98 /* images.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		67581F9520522368008DE3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67581F9720522368008DE3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67581F9820522368008DE3AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6790BFA22053C2D600B6AC98 /* images.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = images.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				67581F8A20522368008DE3AF /* AppDelegate.m */,
 				67581F8C20522368008DE3AF /* ViewController.h */,
 				67581F8D20522368008DE3AF /* ViewController.m */,
+				6790BFA22053C2D600B6AC98 /* images.plist */,
 				67581F8F20522368008DE3AF /* Main.storyboard */,
 				67581F9220522368008DE3AF /* Assets.xcassets */,
 				67581F9420522368008DE3AF /* LaunchScreen.storyboard */,
@@ -129,6 +132,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6790BFA32053C2D600B6AC98 /* images.plist in Resources */,
 				67581F9620522368008DE3AF /* LaunchScreen.storyboard in Resources */,
 				67581F9320522368008DE3AF /* Assets.xcassets in Resources */,
 				67581F9120522368008DE3AF /* Main.storyboard in Resources */,
