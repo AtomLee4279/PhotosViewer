@@ -46,7 +46,7 @@
             ImageModel* imageModel = [[ImageModel alloc] init];
             imageModel.icon = dict[@"icon"];
             imageModel.desc = dict[@"desc"];
-            [tempArray addObject:dict];
+            [tempArray addObject:imageModel];
         }
         _images =tempArray;
     }
