@@ -13,7 +13,7 @@
 		67581F9320522368008DE3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67581F9220522368008DE3AF /* Assets.xcassets */; };
 		67581F9620522368008DE3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67581F9420522368008DE3AF /* LaunchScreen.storyboard */; };
 		67581F9920522368008DE3AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67581F9820522368008DE3AF /* main.m */; };
-		679097DA2055876300D6E939 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 679097D92055876300D6E939 /* PhotoModel.m */; };
+		679097DA2055876300D6E939 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 679097D92055876300D6E939 /* ImageModel.m */; };
 		6790BFA32053C2D600B6AC98 /* images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6790BFA22053C2D600B6AC98 /* images.plist */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +28,8 @@
 		67581F9520522368008DE3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67581F9720522368008DE3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67581F9820522368008DE3AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		679097D82055876300D6E939 /* PhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoModel.h; sourceTree = "<group>"; };
-		679097D92055876300D6E939 /* PhotoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoModel.m; sourceTree = "<group>"; };
+		679097D82055876300D6E939 /* ImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
+		679097D92055876300D6E939 /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		6790BFA22053C2D600B6AC98 /* images.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = images.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,8 +69,8 @@
 				67581F8D20522368008DE3AF /* ViewController.m */,
 				6790BFA22053C2D600B6AC98 /* images.plist */,
 				67581F8F20522368008DE3AF /* Main.storyboard */,
-				679097D82055876300D6E939 /* PhotoModel.h */,
-				679097D92055876300D6E939 /* PhotoModel.m */,
+				679097D82055876300D6E939 /* ImageModel.h */,
+				679097D92055876300D6E939 /* ImageModel.m */,
 				67581F9220522368008DE3AF /* Assets.xcassets */,
 				67581F9420522368008DE3AF /* LaunchScreen.storyboard */,
 				67581F9720522368008DE3AF /* Info.plist */,
@@ -153,7 +153,7 @@
 			files = (
 				67581F8E20522368008DE3AF /* ViewController.m in Sources */,
 				67581F9920522368008DE3AF /* main.m in Sources */,
-				679097DA2055876300D6E939 /* PhotoModel.m in Sources */,
+				679097DA2055876300D6E939 /* ImageModel.m in Sources */,
 				67581F8B20522368008DE3AF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

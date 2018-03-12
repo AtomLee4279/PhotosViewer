@@ -6,19 +6,19 @@
 		<key>icon</key>
 		<string>1</string>
 		<key>desc</key>
-		<string>1</string>
+		<string>哈哈哈！</string>
 	</dict>
 	<dict>
 		<key>icon</key>
 		<string>2</string>
 		<key>desc</key>
-		<string>2</string>
+		<string>啊啊啊！</string>
 	</dict>
 	<dict>
 		<key>icon</key>
 		<string>3</string>
 		<key>desc</key>
-		<string>3</string>
+		<string>呱呱呱！</string>
 	</dict>
 </array>
 </plist>

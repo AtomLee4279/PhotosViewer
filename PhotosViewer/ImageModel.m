@@ -6,8 +6,8 @@
 //  Copyright © 2018年 李一贤. All rights reserved.
 //
 
-#import "PhotoModel.h"
+#import "ImageModel.h"
 
-@implementation PhotoModel
+@implementation ImageModel
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "ImageModel.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *preViewBtn;
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
@@ -38,7 +38,17 @@
         //1.获取plist文件的全路径
         NSString* path = [[NSBundle mainBundle] pathForResource:@"images.plist" ofType:nil];
         //2.读取plist文件
-        _images = [NSArray arrayWithContentsOfFile:path];
+        NSArray* dictArray = [NSArray arrayWithContentsOfFile:path];
+        //3.字典装模型
+        NSMutableArray *tempArray = [[NSMutableArray alloc]init];
+        for(NSDictionary *dict in dictArray)
+        {
+            ImageModel* imageModel = [[ImageModel alloc] init];
+            imageModel.icon = dict[@"icon"];
+            imageModel.desc = dict[@"desc"];
+            [tempArray addObject:dict];
+        }
+        _images =tempArray;
     }
     return _images;
 }
@@ -65,8 +75,9 @@
 -(void)setPhotosData
 {
     self.numLabel.text = [NSString stringWithFormat:@"%d/%ld",_index+1,self.images.count];
-    self.headImage.image = [UIImage imageNamed:self.images[_index][@"icon"]];
-    self.descLabel.text = self.images[_index][@"desc"];
+    ImageModel* image = self.images[_index];
+    self.headImage.image = [UIImage imageNamed:image.icon];
+    self.descLabel.text = image.desc;
 }
 
 @end

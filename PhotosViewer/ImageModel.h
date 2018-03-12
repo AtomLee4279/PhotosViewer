@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PhotoModel : NSObject
+@interface ImageModel : NSObject
 
 @property(nonatomic,copy)NSString* icon;
 @property(nonatomic,copy)NSString* desc;
